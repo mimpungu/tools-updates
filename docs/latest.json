@@ -6,6 +6,18 @@
         "windows-x86_64": {
             "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRUGgvZGpuaGpMTFdlRVFEVndia09vb2VJSm04TXh4eGVZb0VJSGg4M3REMHQ0NEIzNCtydG0rR1IveDhHR1BtRkVUVmk1STU2Myt3VmtpMXlxT1ZQc3FJOG5paExnRHdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4NDg2NTY0CWZpbGU6RGV1c3dlbGxUb29sc18xLjAuM194NjQtc2V0dXAubnNpcy56aXAKRzRXYVVWci9ZR2JBR1BCdXBWNHQrM3h2WGpUNXFQckg4akxHaVBTSWFkeGZLaHg5NjhBRE1Oa0hKVVBWRi8zZmNoWUJyYll0QVJOSHNsWjNLQXVYQUE9PQo=",
             "url": "https://github.com/mimpungu/tools-updates/raw/master/docs/DeuswellTools_1.0.3_x64-setup.nsis.zip"
+        },
+        "darwin-x86_64": {
+            "signature": "REPLACE_WITH_MACOS_INTEL_SIGNATURE",
+            "url": "https://github.com/mimpungu/tools-updates/raw/master/docs/DeuswellTools_1.0.3_x64.app.tar.gz"
+        },
+        "darwin-aarch64": {
+            "signature": "REPLACE_WITH_MACOS_ARM_SIGNATURE",
+            "url": "https://github.com/mimpungu/tools-updates/raw/master/docs/DeuswellTools_1.0.3_aarch64.app.tar.gz"
+        },
+        "linux-x86_64": {
+            "signature": "REPLACE_WITH_LINUX_SIGNATURE",
+            "url": "https://github.com/mimpungu/tools-updates/raw/master/docs/DeuswellTools_1.0.3_amd64.AppImage.tar.gz"
         }
     }
 }
