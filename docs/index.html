@@ -2,122 +2,255 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lecteur Audio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Télécharger DeuswellTools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    /* === CSS intégré === */
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(to right, #6a11cb, #2575fc);
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #ffffff;
+      color: #202124;
+    }
+
+    /* ===== HEADER ===== */
+    header {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
-      min-height: 100vh;
-      color: #fff;
+      padding: 14px 32px;
+      font-size: 14px;
+      color: #5f6368;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .header-left img {
+      width: 40px;
+      height: auto;
+    }
+
+    .header-links a {
+      color: #5f6368;
+      text-decoration: none;
+      margin-right: 14px;
+    }
+
+    .header-right button {
+      border: 1px solid #dadce0;
+      background: #f1f3f4;
+      border-radius: 18px;
+      padding: 6px 14px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    /* ===== MAIN ===== */
+    main {
+      max-width: 1100px;
+      margin: 90px auto 0;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .logo-main {
+      width: 100px;
+      margin-bottom: 28px;
     }
 
     h1 {
-      margin: 40px 0 20px 0;
-      text-align: center;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 50px;
     }
 
-    .cards-container {
+    /* ===== CARDS ===== */
+    .cards {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
-      width: 90%;
-      max-width: 900px;
+      gap: 24px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
     }
 
     .card {
-      background-color: rgba(0,0,0,0.5);
-      border-radius: 15px;
-      padding: 20px;
-      width: 280px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-      text-align: center;
-      transition: transform 0.3s;
+      width: 260px;
+      border: 1px solid #dadce0;
+      border-radius: 18px;
+      padding: 32px 24px;
+      text-decoration: none;
+      color: #202124;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      transform: translateY(-2px);
     }
 
-    audio {
+    .card img {
+      width: 64px;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #5f6368;
+    }
+
+    .system {
+      font-size: 13px;
+      color: #5f6368;
+      margin-bottom: 22px;
+    }
+
+    .checkbox {
+      font-size: 13px;
+      color: #5f6368;
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .checkbox input {
+      margin-right: 6px;
+    }
+
+    .terms {
+      margin-top: 12px;
+      font-size: 12px;
+      color: #5f6368;
+      line-height: 1.5;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    .terms a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+
+    .update-link {
+      display: block;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #1a73e8;
+      text-decoration: none;
+    }
+
+    /* ===== PREVIEW ===== */
+    .preview {
+      margin-top: 80px;
+    }
+
+    .preview img {
       width: 100%;
-      margin-top: 15px;
-      outline: none;
-      border-radius: 10px;
+      max-width: 900px;
+      border-radius: 18px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
     }
 
-    .card button {
-      background-color: #ff4081;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 8px;
-      color: #fff;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 10px;
-      transition: 0.3s;
-    }
-
-    .card button:hover {
-      background-color: #e91e63;
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 36px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>🎵 Lecteur Audio Méditation</h1>
-  
-  <div class="cards-container">
-    <!-- Card 1 -->
-    <div class="card">
-      <h2>Méditation 1</h2>
-      <audio id="audio1" controls>
-        <source src="meditation1.mp3" type="audio/mpeg">
-        Votre navigateur ne supporte pas l’élément audio.
-      </audio>
-      <button onclick="toggleAudio('audio1', this)">▶️ Play / Pause</button>
-    </div>
 
-    <!-- Card 2 -->
-    <div class="card">
-      <h2>Méditation 2</h2>
-      <audio id="audio2" controls>
-        <source src="meditation2.mp3" type="audio/mpeg">
-        Votre navigateur ne supporte pas l’élément audio.
-      </audio>
-      <button onclick="toggleAudio('audio2', this)">▶️ Play / Pause</button>
+<header>
+  <div class="header-left">
+    <img src="images/deuswell_symbole_primary.png" alt="DeuswellTools">
+    <div class="header-links">
+      <a href="https://deuswell.com">Site officiel</a>
+      <a href="https://deuswell.com/support">Support</a>
+      <a href="https://github.com/deuswell">Updates</a>
     </div>
   </div>
 
-  <script>
-    // === JS intégré pour Play/Pause ===
-    function toggleAudio(audioId, button) {
-      const audio = document.getElementById(audioId);
-      if (audio.paused) {
-        audio.play();
-        button.textContent = "⏸️ Pause";
-      } else {
-        audio.pause();
-        button.textContent = "▶️ Play / Pause";
-      }
+  <div class="header-right">
+    <button>⏸ Mettre l’animation en pause</button>
+  </div>
+</header>
 
-      // Pause les autres audios
-      const audios = document.querySelectorAll('audio');
-      audios.forEach(a => {
-        if(a.id !== audioId) {
-          a.pause();
-          const btn = a.nextElementSibling;
-          if(btn) btn.textContent = "▶️ Play / Pause";
-        }
-      });
-    }
-  </script>
+<main>
+  <img class="logo-main" src="images/deuswell_symbole_primary.png" alt="DeuswellTools">
+
+  <h1>
+    Boostez votre<br>
+    productivité au quotidien
+  </h1>
+
+  <!-- CARDS OS -->
+  <div class="cards">
+    <a class="card" href="#">
+      <img src="images/microsoft.svg" alt="Windows">
+      <h3>Windows</h3>
+      <p>Télécharger pour Windows</p>
+    </a>
+
+    <a class="card" href="#">
+      <img src="https://cdn.simpleicons.org/apple" alt="macOS">
+      <h3>macOS</h3>
+      <p>Télécharger pour macOS</p>
+    </a>
+
+    <a class="card" href="#">
+      <img src="https://cdn.simpleicons.org/linux" alt="Linux">
+      <h3>Linux</h3>
+      <p>Télécharger pour Linux</p>
+    </a>
+  </div>
+
+  <div class="system">
+    Versions disponibles pour Windows, macOS et Linux
+  </div>
+
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" checked>
+      Aidez-nous à améliorer DeuswellTools en nous envoyant automatiquement
+      des statistiques d'utilisation et des rapports d'erreur.
+      <a href="#">En savoir plus</a>
+    </label>
+  </div>
+
+  <div class="terms">
+    En téléchargeant DeuswellTools, vous acceptez les
+    <a href="#">Conditions d'utilisation de Deuswell</a>
+    et les
+    <a href="#">Conditions d'utilisation supplémentaires de DeuswellTools</a>.
+  </div>
+
+  <a class="update-link" href="#">
+    Je souhaite mettre à jour DeuswellTools
+  </a>
+
+  <div class="preview">
+    <img src="images/preview.png" alt="Aperçu">
+  </div>
+</main>
+
 </body>
 </html>
