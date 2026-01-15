@@ -1,11 +1,11 @@
 {
-    "version": "1.0.0",
-    "notes": "Version initiale de DeuswellTools. Plus de 80 outils, nouvelle interface premium et sécurité locale renforcée.",
-    "pub_date": "2026-01-15T10:00:00Z",
+    "version": "1.0.1",
+    "notes": "🌍 Nouvelle version avec support multilingue (FR/EN) ! Changez la langue via le sélecteur en haut à droite.",
+    "pub_date": "2026-01-15T13:00:00Z",
     "platforms": {
         "windows-x86_64": {
-            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRUGgvZGpuaGpMTFFCZEp0WkJ4aHhDQW5MSnZ5cFR2NWR0WEM0MUhJeFp4SzRSMjBBbW9obXoKcWN6Z2QzN3duQjNQeG1iKzExUW1hUEJvTWpuSzdxd0xFeVRzaVYzWndlVWNTTklEMDN1N2RITC90azZMM21jbE9aOGpJOS84dTI3VGo1ZUFKeHpBRGc9PQo=",
-            "url": "https://github.com/mimpungu/tools-updates/raw/main/DeuswellTools_1.0.0_x64-setup.nsis.zip"
+            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRUGgvZGpuaGpMTFplcm80T2JRdTdwNXI4dTNEM3dzTEEvNUhDanpOQ041N2dNVmhETDRwWlBhK0ZQT2JWUS82OWtYOTIwUjM1OFJvZERXaFhKREh2bC9OTktCNVB3MEFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4NDgxMjIwCWZpbGU6RGV1c3dlbGxUb29sc18xLjAuMV94NjQtc2V0dXAubnNpcy56aXAKV09tRXhoTXNla0k2cVFoQm1kanFQeFVMd0dBWmJNZkY3K05NVHB2K29jdmp1ZTd3NFkxOUE3ZFNGTlFtZHNXNkl3Qlc1cVNkRlBGSG45UHlSUWVvQnc9PQo=",
+            "url": "https://github.com/mimpungu/tools-updates/raw/main/DeuswellTools_1.0.1_x64-setup.nsis.zip"
         }
     }
 }
