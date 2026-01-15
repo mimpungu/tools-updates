@@ -1,11 +1,11 @@
 {
-    "version": "1.0.1",
-    "notes": "🌍 Nouvelle version avec support multilingue (FR/EN) ! Changez la langue via le sélecteur en haut à droite.",
-    "pub_date": "2026-01-15T13:00:00Z",
+    "version": "1.0.2",
+    "notes": "🌍 Version 1.0.2 - Correction de la configuration des mises à jour et synchronisation des versions.",
+    "pub_date": "2026-01-15T13:58:00Z",
     "platforms": {
         "windows-x86_64": {
-            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRUGgvZGpuaGpMTFplcm80T2JRdTdwNXI4dTNEM3dzTEEvNUhDanpOQ041N2dNVmhETDRwWlBhK0ZQT2JWUS82OWtYOTIwUjM1OFJvZERXaFhKREh2bC9OTktCNVB3MEFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4NDgxMjIwCWZpbGU6RGV1c3dlbGxUb29sc18xLjAuMV94NjQtc2V0dXAubnNpcy56aXAKV09tRXhoTXNla0k2cVFoQm1kanFQeFVMd0dBWmJNZkY3K05NVHB2K29jdmp1ZTd3NFkxOUE3ZFNGTlFtZHNXNkl3Qlc1cVNkRlBGSG45UHlSUWVvQnc9PQo=",
-            "url": "https://github.com/mimpungu/tools-updates/raw/master/docs/DeuswellTools_1.0.1_x64-setup.nsis.zip"
+            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRUGgvZGpuaGpMTFErNGo3bmVOWk1HRkFZeFNiWmFhOTJZbWR6MW5ZV3dsOW9JUHVzOWhJYThZNGR6TW5jYXFVaW8yNjBVZTRCS0dYMmI4VmRLODlHMm9KSldMZGhqbXdjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4NDg1NDg5CWZpbGU6RGV1c3dlbGxUb29sc18xLjAuMl94NjQtc2V0dXAubnNpcy56aXAKN1ZPaUxsVUlNRUc0R2xJK1RjWklIUjVjQml2MDJBZ1lORy8rTWlZajUyTHNKRG42dGdKSzA5aE9BcEZqOHBDdDN2WHNadllBbzhVVFZVejFOdGVkQkE9PQo=",
+            "url": "https://github.com/mimpungu/tools-updates/raw/master/docs/DeuswellTools_1.0.2_x64-setup.nsis.zip"
         }
     }
 }
