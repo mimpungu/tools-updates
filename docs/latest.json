@@ -1,19 +1,19 @@
 {
     "version": "1.0.3",
     "notes": "🌍 Version 1.0.3 - Test du système de mise à jour automatique.",
-    "pub_date": "2026-01-15T14:17:00Z",
+    "pub_date": "2026-01-15T17:40:00Z",
     "platforms": {
         "windows-x86_64": {
             "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRUGgvZGpuaGpMTFdlRVFEVndia09vb2VJSm04TXh4eGVZb0VJSGg4M3REMHQ0NEIzNCtydG0rR1IveDhHR1BtRkVUVmk1STU2Myt3VmtpMXlxT1ZQc3FJOG5paExnRHdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4NDg2NTY0CWZpbGU6RGV1c3dlbGxUb29sc18xLjAuM194NjQtc2V0dXAubnNpcy56aXAKRzRXYVVWci9ZR2JBR1BCdXBWNHQrM3h2WGpUNXFQckg4akxHaVBTSWFkeGZLaHg5NjhBRE1Oa0hKVVBWRi8zZmNoWUJyYll0QVJOSHNsWjNLQXVYQUE9PQo=",
-            "url": "https://github.com/mimpungu/tools-updates/raw/master/docs/DeuswellTools_1.0.3_x64-setup.nsis.zip"
+            "url": "https://github.com/mimpungu/tools-updates/releases/download/v1.0.3/DeuswellTools_1.0.3_x64-setup.nsis.zip"
         },
         "darwin-x86_64": {
-            "signature": "REPLACE_WITH_MACOS_INTEL_SIGNATURE",
-            "url": "https://github.com/mimpungu/tools-updates/raw/master/docs/DeuswellTools_1.0.3_x64.app.tar.gz"
+            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRUGgvZGpuaGpMTFlCckRyV21mYjE0QzBDL3UyZEd3NHhlTXI0TDR6RU9rdzFNeVc3MXB5UzVLQWJrcEM2MmswTmlDcGRTRmRpQ2xqWGFrVGlPTm9YdmxaeG9MMm9TUkFFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4NDk1MTUxCWZpbGU6RGV1c3dlbGxUb29scy5hcHAudGFyLmd6Clk3eTVTVmliRzVMM2VPV0pscTdyQUxPdTZ1QW1XNk04Vm8zQWxJOE1UVCtwVi9oNlhKMHd0aE5EN1dIUitVWSs3QWJQYm41eEtwaVlBUmsySDQ1ekRRPT0K",
+            "url": "https://github.com/mimpungu/tools-updates/releases/download/v1.0.3/DeuswellTools_1.0.3_x64.app.tar.gz"
         },
         "darwin-aarch64": {
             "signature": "REPLACE_WITH_MACOS_ARM_SIGNATURE",
-            "url": "https://github.com/mimpungu/tools-updates/raw/master/docs/DeuswellTools_1.0.3_aarch64.app.tar.gz"
+            "url": "https://github.com/mimpungu/tools-updates/releases/download/v1.0.3/DeuswellTools_1.0.3_aarch64.app.tar.gz"
         },
         "linux-x86_64": {
             "signature": "REPLACE_WITH_LINUX_SIGNATURE",
