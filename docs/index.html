@@ -472,6 +472,117 @@
     </div>
   </footer>
 
+
+  <!-- Mac Selection Modal -->
+  <div id="mac-modal" class="modal">
+    <div class="modal-content">
+      <h3>Choisir votre version Mac</h3>
+      <p>Sélectionnez le type de processeur de votre Mac.</p>
+      <div class="modal-buttons vertical">
+        <a href="releases/download/v1.0.3/DeuswellTools_1.0.3_x64.dmg" class="chip-btn" download>
+          <div class="chip-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+              <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+              <path d="M9 9h6v6H9z"></path>
+            </svg>
+          </div>
+          <div class="chip-info">
+            <span class="chip-title">Mac avec puce Intel</span>
+            <span class="chip-desc">Modèles plus anciens</span>
+          </div>
+        </a>
+
+        <a href="#" class="chip-btn disabled"
+          onclick="alert('La version native Apple Silicon sera bientôt disponible. En attendant, vous pouvez utiliser la version Intel qui fonctionne très bien via Rosetta 2.'); return false;">
+          <div class="chip-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <div class="chip-info">
+            <span class="chip-title">Mac avec puce Apple</span>
+            <span class="chip-desc">M1, M2, M3 (Bientôt)</span>
+          </div>
+        </a>
+      </div>
+      <button class="cancel-link" id="mac-cancel">Annuler</button>
+    </div>
+  </div>
+
+  <style>
+    .modal-buttons.vertical {
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .chip-btn {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+      padding: 16px;
+      border: 1px solid #dadce0;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #202124;
+      transition: all 0.2s;
+      background: white;
+    }
+
+    .chip-btn:hover {
+      border-color: #1a73e8;
+      background: #f8f9fa;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .chip-btn.disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      background: #f1f3f4;
+    }
+
+    .chip-icon {
+      color: #5f6368;
+      display: flex;
+      align-items: center;
+    }
+
+    .chip-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .chip-title {
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .chip-desc {
+      font-size: 13px;
+      color: #5f6368;
+      margin-top: 2px;
+    }
+
+    .cancel-link {
+      background: none;
+      border: none;
+      color: #5f6368;
+      cursor: pointer;
+      padding: 8px;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+
+    .cancel-link:hover {
+      color: #202124;
+      text-decoration: underline;
+    }
+  </style>
+
   <script>
     const menuOpen = document.getElementById('menu-open');
     const menuClose = document.getElementById('menu-close');
@@ -487,7 +598,6 @@
       document.body.style.overflow = 'auto';
     });
 
-    // Close menu when clicking a link
     const mobileLinks = mobileMenu.querySelectorAll('a');
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
@@ -496,40 +606,64 @@
       });
     });
 
-    // Download Confirmation Logic
-    const downloadLinks = document.querySelectorAll('.card[download], .update-link[download]');
-    const modal = document.getElementById('download-modal');
+    // Mac Modal Logic
+    const macCard = document.querySelector('.card[href*=".dmg"]');
+    const macModal = document.getElementById('mac-modal');
+    const macCancel = document.getElementById('mac-cancel');
+
+    if (macCard) {
+      macCard.addEventListener('click', (e) => {
+        e.preventDefault();
+        macModal.style.display = 'flex';
+      });
+    }
+
+    if (macCancel) {
+      macCancel.addEventListener('click', () => {
+        macModal.style.display = 'none';
+      });
+    }
+
+    // Close modals on outside click
+    window.addEventListener('click', (e) => {
+      if (e.target === macModal) {
+        macModal.style.display = 'none';
+      }
+      if (e.target === document.getElementById('download-modal')) {
+        document.getElementById('download-modal').style.display = 'none';
+      }
+    });
+
+    // Keep existing download modal logic for Windows/others
+    const otherDownloadLinks = document.querySelectorAll('.card[href*=".exe"], .update-link');
+    const downloadModal = document.getElementById('download-modal');
     const confirmBtn = document.getElementById('confirm-btn');
     const cancelBtn = document.getElementById('cancel-btn');
     let pendingUrl = '';
 
-    downloadLinks.forEach(link => {
+    otherDownloadLinks.forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
         pendingUrl = link.href;
-        modal.style.display = 'flex';
+        downloadModal.style.display = 'flex';
       });
     });
 
-    confirmBtn.addEventListener('click', () => {
-      if (pendingUrl) {
-        window.location.href = pendingUrl;
-        modal.style.display = 'none';
-      }
-    });
+    if (confirmBtn) {
+      confirmBtn.addEventListener('click', () => {
+        if (pendingUrl) {
+          window.location.href = pendingUrl;
+          downloadModal.style.display = 'none';
+        }
+      });
+    }
 
-    cancelBtn.addEventListener('click', () => {
-      modal.style.display = 'none';
-      pendingUrl = '';
-    });
-
-    // Close modal if clicking outside content
-    window.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.style.display = 'none';
+    if (cancelBtn) {
+      cancelBtn.addEventListener('click', () => {
+        downloadModal.style.display = 'none';
         pendingUrl = '';
-      }
-    });
+      });
+    }
   </script>
 </body>
 
