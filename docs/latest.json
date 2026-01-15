@@ -1,11 +1,11 @@
 {
-    "version": "1.0.2",
-    "notes": "🌍 Version 1.0.2 - Correction de la configuration des mises à jour et synchronisation des versions.",
-    "pub_date": "2026-01-15T13:58:00Z",
+    "version": "1.0.3",
+    "notes": "🌍 Version 1.0.3 - Test du système de mise à jour automatique.",
+    "pub_date": "2026-01-15T14:17:00Z",
     "platforms": {
         "windows-x86_64": {
-            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRUGgvZGpuaGpMTFErNGo3bmVOWk1HRkFZeFNiWmFhOTJZbWR6MW5ZV3dsOW9JUHVzOWhJYThZNGR6TW5jYXFVaW8yNjBVZTRCS0dYMmI4VmRLODlHMm9KSldMZGhqbXdjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4NDg1NDg5CWZpbGU6RGV1c3dlbGxUb29sc18xLjAuMl94NjQtc2V0dXAubnNpcy56aXAKN1ZPaUxsVUlNRUc0R2xJK1RjWklIUjVjQml2MDJBZ1lORy8rTWlZajUyTHNKRG42dGdKSzA5aE9BcEZqOHBDdDN2WHNadllBbzhVVFZVejFOdGVkQkE9PQo=",
-            "url": "https://github.com/mimpungu/tools-updates/raw/master/docs/DeuswellTools_1.0.2_x64-setup.nsis.zip"
+            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRUGgvZGpuaGpMTFdlRVFEVndia09vb2VJSm04TXh4eGVZb0VJSGg4M3REMHQ0NEIzNCtydG0rR1IveDhHR1BtRkVUVmk1STU2Myt3VmtpMXlxT1ZQc3FJOG5paExnRHdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4NDg2NTY0CWZpbGU6RGV1c3dlbGxUb29sc18xLjAuM194NjQtc2V0dXAubnNpcy56aXAKRzRXYVVWci9ZR2JBR1BCdXBWNHQrM3h2WGpUNXFQckg4akxHaVBTSWFkeGZLaHg5NjhBRE1Oa0hKVVBWRi8zZmNoWUJyYll0QVJOSHNsWjNLQXVYQUE9PQo=",
+            "url": "https://github.com/mimpungu/tools-updates/raw/master/docs/DeuswellTools_1.0.3_x64-setup.nsis.zip"
         }
     }
 }
