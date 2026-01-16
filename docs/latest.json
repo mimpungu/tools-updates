@@ -1,23 +1,23 @@
 {
-  "version": "1.0.16",
-  "notes": "🛡️ Version 1.0.16\n\n- Correctifs de sécurité critiques (XSS, DoS).\n- Réparation du système de mise à jour automatique.\n- Amélioration de la stabilité sous macOS.",
-  "pub_date": "2026-01-16T22:09:31.997Z",
+  "version": "1.0.17",
+  "notes": "🛡️ Version 1.0.17\n\n- Correctifs de sécurité critiques (XSS, DoS).\n- Réparation du système de mise à jour automatique.\n- Amélioration de la stabilité sous macOS.",
+  "pub_date": "2026-01-16T22:53:57.791Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRUGgvZGpuaGpMTFZwUWViRE1rU0krTytxdHYzbStjUnRyVGdCbU9jQ1FJMlZQOC9QSnpVVG91TXJqUGN5Mkk2TW50R2ZjQW1vdDNUWmdPaDhUb1MvRnZ2ZHlqTE1KWUFvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4NjAxMzQyCWZpbGU6RGV1c3dlbGxUb29sc18xLjAuMTZfeDY0LXNldHVwLm5zaXMuemlwClhqZ0kzYmhGWjJLbEV3UHd6LzNlU1Y2N3dMM25OSFc5TGp5Z2kyWVNlVlpzazh0QkpMYXZiSUQrRWtZZEtJRS9UUUQ5NDNYdVBNejB1STdYMDRKeUJnPT0K",
-      "url": "https://github.com/mimpungu/devtools/releases/download/v1.0.16/DeuswellTools_1.0.16_x64-setup.nsis.zip"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRUGgvZGpuaGpMTGVDclNxckpZaFY2OGJSN3FFejRWU0NVM1paYTRFc0hxNldjeEdFRTVOM0pXQm4raXF3MnVQanU1ZnBkK29mZWRkNytNQWtxR0N1R21DYk1ZUkVxSlFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4NjA0MDAyCWZpbGU6RGV1c3dlbGxUb29sc18xLjAuMTdfeDY0LXNldHVwLm5zaXMuemlwCkJWK254Y2Z4SEhEQWxndHdhRkpvZldpTmRPYy92cHM0SDNzaUZ3Wk1ZcWpTNGk5MHhwTEg5MzRNbU4xbVVVVTRtSmNyRURYcng0eFRjTmpib096U0FRPT0K",
+      "url": "https://github.com/mimpungu/devtools/releases/download/v1.0.17/DeuswellTools_1.0.17_x64-setup.nsis.zip"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRUGgvZGpuaGpMTFg2MFNwMTVMdzJzZ01MckNLUEN5SXNFY29jWGl0TllwdUVSSUJwU1hScmZhME9YdFUwN1c5ODNWRDZ2RTAvOXI4QTNKa0RidWVvbWw4ZHYzclVVaUE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4NjAwODY4CWZpbGU6RGV1c3dlbGxUb29scy5hcHAudGFyLmd6Ck14M0krS1Y3WjBsVk5xU0hBQzVuREkvS29OMXVzUUI2ZFR5ZjNIRHpNcXF0VjVVYmxtLytmcFZhSytsQVN1c2NGYUpZRTljSEJkNmp4bHBhU05pZ0JBPT0K",
-      "url": "https://github.com/mimpungu/devtools/releases/download/v1.0.16/DeuswellTools.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRUGgvZGpuaGpMTFE5T3RIT2xxWk0reGdieWNKbVVlUDBVYjNaRjM0WGpNeEN1RU1maWJGSDcrR1AzYUJBZlVNanFVWExHZXBvV0l1bk5DUXhDaTZhUlRJUHVlSElPMXc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4NjAzNDgxCWZpbGU6RGV1c3dlbGxUb29scy5hcHAudGFyLmd6CkR0RFgrU2xiRkFlUE1Wd2xwV2tqclFlUGYwWk1PM2h0L1Q2YVZQTlcxY1g4ZGhIYTVuN3ptWEJYSSt2UXREZWtEQjA4dVAyQm9zRzJPblExNkd5OUFRPT0K",
+      "url": "https://github.com/mimpungu/devtools/releases/download/v1.0.17/DeuswellTools.app.tar.gz"
     },
     "darwin-aarch64": {
       "signature": "REPLACE_WITH_MACOS_ARM_SIGNATURE",
       "url": "https://github.com/mimpungu/devtools/releases/download/v1.0.16/DeuswellTools_1.0.16_aarch64.dmg"
     },
     "linux-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRUGgvZGpuaGpMTFRPZm5DVDUrVCtFYmQvMlF1bm1hZkt4ajdqUFNPTHpyUXB0bUZsajZtd1dXdVFPdnU2ZkNLVWZSNURUdEZ5cU1DbDhoTzBHaDMwMWlhSmw4bi9mdkE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4NjAxMTY4CWZpbGU6ZGV1c3dlbGwtdG9vbHNfMS4wLjE2X2FtZDY0LkFwcEltYWdlLnRhci5nego0ZUw2VjZFd0w1MHlXVVlzR1lCeW43Y1pRRkhkMzBpNWg4U1VSZDNIc0Z1TEFWUGdJeEF6Y3gzdnN6Wi9STmZtcldGUkFldFNKKyt1Qzlic0hORXpCUT09Cg==",
-      "url": "https://github.com/mimpungu/devtools/releases/download/v1.0.16/deuswell-tools_1.0.16_amd64.AppImage.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRUGgvZGpuaGpMTFpKRU9lTVVWVjY2Q2pJYm5PZng3ZDF0aGZtaWtxdi9WeThMeFYvais3ZmhRZG5NMXFhVSsyM2xtZnRoc2psM0tWOG4vSnA0UWJrUWEzZitMNC9uWHdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4NjAzODU4CWZpbGU6ZGV1c3dlbGwtdG9vbHNfMS4wLjE3X2FtZDY0LkFwcEltYWdlLnRhci5negp6YXpYcVkyOHFaTGlZMzdMbXQxVHdrVnloSXBVcDA0MVVkTFlpSDVHWXBhRi94bXM1L1FpTTVkSFVWU3B5aUVoRFM2VUNxMEd5YUtlZXhqcmZvTzdEQT09Cg==",
+      "url": "https://github.com/mimpungu/devtools/releases/download/v1.0.17/deuswell-tools_1.0.17_amd64.AppImage.tar.gz"
     }
   }
 }
