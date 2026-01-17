@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mises à jour - DeuswellTools</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: #ffffff;
+            color: #202124;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 0 40px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 120px;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 24px;
+            color: #1a1a1a;
+        }
+
+        .subtitle {
+            font-size: 21px;
+            color: #5f6368;
+            font-weight: 400;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .version-item {
+            text-align: left;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            padding: 32px;
+            border-radius: 18px;
+            margin-bottom: 24px;
+            transition: box-shadow 0.2s;
+        }
+
+        .version-item:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .version-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 16px;
+        }
+
+        .version-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #202124;
+        }
+
+        .version-date {
+            font-size: 14px;
+            color: #5f6368;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 24px;
+            position: relative;
+            color: #3c4043;
+        }
+
+        li::before {
+            content: "•";
+            color: #1a73e8;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            color: #9aa0a6;
+            font-size: 14px;
+            border-top: 1px solid #f1f3f4;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                margin: 40px auto;
+                padding: 0 24px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .subtitle {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <img src="images/deuswell_wordmark_primary.png" alt="Deuswell" class="logo">
+
+        <h1>Nouveautés</h1>
+        <p class="subtitle">Découvrez les dernières améliorations apportées à DeuswellTools.</p>
+
+        <div class="version-item">
+            <div class="version-header">
+                <span class="version-title">Version 1.0.24</span>
+                <span class="version-date">17 Janvier 2026</span>
+            </div>
+            <ul>
+                <li>Amélioration de la stabilité générale de l'application.</li>
+                <li>Correction de liens de téléchargement pour les utilisateurs macOS.</li>
+                <li>Optimisation des performances au démarrage.</li>
+                <li>Mise à jour des composants de sécurité.</li>
+            </ul>
+        </div>
+
+        <!-- Future Template
+    <div class="version-item">
+      <div class="version-header">
+        <span class="version-title">Version 1.0.x</span>
+        <span class="version-date">Date</span>
+      </div>
+      <ul>
+        <li>Détail...</li>
+      </ul>
+    </div>
+    -->
+
+        <a href="index.html" class="back-link">← Retour à l'accueil</a>
+    </main>
+
+    <footer>
+        &copy; 2026 Deuswell. Tous droits réservés.
+    </footer>
+
+</body>
+
+</html>
