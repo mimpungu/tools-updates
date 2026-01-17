@@ -1,19 +1,19 @@
 {
-  "version": "1.0.22",
-  "notes": "🛡️ Version 1.0.22\n\n- Correctifs de sécurité critiques (XSS, DoS).\n- Réparation du système de mise à jour automatique.\n- Amélioration de la stabilité sous macOS.",
-  "pub_date": "2026-01-17T00:27:29.747Z",
+  "version": "1.0.23",
+  "notes": "🛡️ Version 1.0.23\n\n- Correctifs de sécurité critiques (XSS, DoS).\n- Réparation du système de mise à jour automatique.\n- Amélioration de la stabilité sous macOS.",
+  "pub_date": "2026-01-17T00:53:04.903Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRUGgvZGpuaGpMTFl3NGdlTE9nZ2VNbkVud1dEb2VGeC9ONDNsbjN3bkRNTmlCSjRVTHJLb3F4NStNcGRKUnhSQnVlNGYwdktGc0hHZVBRa2lIdFpSblpFbTdYNjBuQVFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4NjA5NjE2CWZpbGU6RGV1c3dlbGxUb29sc18xLjAuMjJfeDY0LXNldHVwLm5zaXMuemlwCkFOd1JFdjA0RG1BV0xlS21BSG9QSmk2Q25IK2VnNDJkSHAyY3lldExNTytaN1gzL0tFNTZYcnZYWHFCWWx3TzdvWWk5dGgrSGpwZnZJRjNvTGhnVEFBPT0K",
-      "url": "https://github.com/mimpungu/devtools/releases/download/v1.0.22/DeuswellTools_1.0.22_x64-setup.nsis.zip"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRUGgvZGpuaGpMTFgrTzFSajJQUmpYVmVsc1ZHdk5DbE9kblA5bFF2RHlBTmNaTHlvTXM3UWg2UW9lNks5d05aTEgyNHJ3cEFQMFNHdGp4aGgyMHh3SThNZFg1WWtNaHdNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4NjExMTQ2CWZpbGU6RGV1c3dlbGxUb29sc18xLjAuMjNfeDY0LXNldHVwLm5zaXMuemlwCi9NQ0ZNV0NqZit1cmJxM3VtNHVjc0lJQkUreEROSWYwQURlZ09MSzBGRUVaMlNISFZBSzN3MURkZCtCcFh1ZVhXVExPaENWakR3dENvclBUclNXcUNRPT0K",
+      "url": "https://github.com/mimpungu/devtools/releases/download/v1.0.23/DeuswellTools_1.0.23_x64-setup.nsis.zip"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRUGgvZGpuaGpMTFZ4TmxSWmxudXJBdXVid0k5Zkt2MUg1cGlRVHdhbXVPSmU4TnNSakwwczNlZFpIS3lyQnVwTStFVERmNGJjWXdGM2JwTjBhNlBhNHRBa3F4dkxZOXdzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4NjA5MDU2CWZpbGU6RGV1c3dlbGxUb29scy5hcHAudGFyLmd6CnNwRjZDYlplbUhCZUNNLzlnRnZZb1hmakRLcHltTldwem9oWGI3VVhYaVNsdFpYdmJmTjNyYktZaktadGYvVHEzdTUzRXlXdEQ3NGxYM0RxdzNndkRRPT0K",
-      "url": "https://github.com/mimpungu/devtools/releases/download/v1.0.22/DeuswellTools.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRUGgvZGpuaGpMTGE4eXpUWWFMSXBNME8yaDQ0RWNaR1FtWlE1dXIraUsveWtwV0tyTU5PdnRsb25nUFFuQnlBUEVOTlJvY3kvTVRRNDFIWk5GR0JqYm81WDcrL1pqY2drPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4NjEwNDg0CWZpbGU6RGV1c3dlbGxUb29scy5hcHAudGFyLmd6CmprSVFldXdKRXVzcnowTWVQRno3aFlnZW5NYVpqaU1GV3prMVpCM29uWG1DU3piMm9aZExxZ1R0aTNac1BlMUErdzFNU2JOY0pBRzBzeHFRRHRNY0J3PT0K",
+      "url": "https://github.com/mimpungu/devtools/releases/download/v1.0.23/DeuswellTools.app.tar.gz"
     },
     "linux-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRUGgvZGpuaGpMTGZaMm9MajdhYmZaVjVyVnVkNGFOcVoxUE10QVhUVUlwWHhZK3l6M3FxR3NURXBGWUNVaXhiMStIMkh0Y3ZlMnpiZFlmaGh6MXRUMnhvMFNhNGxQNXcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4NjA5NDQwCWZpbGU6ZGV1c3dlbGwtdG9vbHNfMS4wLjIyX2FtZDY0LkFwcEltYWdlLnRhci5negpjWjdTWlc4KzRMZXRBVmhUYkpzbkVuTVE5NGY3VGpya3dxMWgvU2FwTldYemJWUEk4cFM1M1B6NDQ3RE9BMTNlTEZ2WUNkN3JoK1M0QmpDZjBpUUhDdz09Cg==",
-      "url": "https://github.com/mimpungu/devtools/releases/download/v1.0.22/deuswell-tools_1.0.22_amd64.AppImage.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRUGgvZGpuaGpMTGJ4KzhwV2crb29ZUEF5YVEzTSt1MmxDeFRobEpGVWJzOWNUTXlFNW9VWUVpblhVZTUvWWRzMGtpVTcwaGhJcXNXWUhvTE5Cb1dvNHZlZTBkRFFJclFvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4NjEwOTE2CWZpbGU6ZGV1c3dlbGwtdG9vbHNfMS4wLjIzX2FtZDY0LkFwcEltYWdlLnRhci5negp0RlgzQUlZNkQzUVdyTXZTVmorTWFrdHdSK3RrMTdBM0xpbW5id0o3VVhnREwrM25JcXpNTHhPSlpzaVZFaXR6Qm5KYzdNMnBsekZVb3R3azZOaUFCUT09Cg==",
+      "url": "https://github.com/mimpungu/devtools/releases/download/v1.0.23/deuswell-tools_1.0.23_amd64.AppImage.tar.gz"
     }
   }
 }
