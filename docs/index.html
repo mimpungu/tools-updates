@@ -536,6 +536,37 @@
     </div>
   </div>
 
+  <!-- Password Modal -->
+  <div id="password-modal" class="modal">
+    <div class="modal-content">
+      <h3>Accès restreint</h3>
+      <p>Accès réservé aux bêta-testeurs. Veuillez entrer le mot de passe pour continuer.</p>
+      <div class="input-group">
+        <input type="password" id="password-input" placeholder="Mot de passe">
+        <div id="password-error" class="error-msg">Mot de passe incorrect</div>
+      </div>
+      <div class="modal-buttons" id="password-buttons">
+        <div class="action-buttons">
+          <button id="password-cancel-btn">Annuler</button>
+          <button id="password-submit-btn">Valider</button>
+        </div>
+      </div>
+
+      <!-- Success Message (Hidden by default) -->
+      <div id="password-success" class="success-msg" style="display: none;">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#0f9d58" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <p style="color: #0f9d58; font-weight: 500; margin-top: 10px;">Mot de passe correct !</p>
+        <p style="font-size: 13px;">Le téléchargement va commencer...</p>
+      </div>
+    </div>
+  </div>
+
   <style>
     .modal-buttons.vertical {
       flex-direction: column;
@@ -607,6 +638,62 @@
     .cancel-link:hover {
       color: #202124;
       text-decoration: underline;
+    }
+
+    .input-group {
+      margin-bottom: 24px;
+      width: 100%;
+    }
+
+    #password-input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #dadce0;
+      border-radius: 6px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    #password-input:focus {
+      border-color: #1a73e8;
+    }
+
+    #password-submit-btn {
+      background-color: #1a73e8;
+      color: white;
+    }
+
+    #password-submit-btn:hover {
+      background-color: #1557b0;
+    }
+
+    .error-msg {
+      color: #d93025;
+      font-size: 12px;
+      margin-top: 8px;
+      display: none;
+      text-align: left;
+    }
+
+    .success-msg {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 0;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(5px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 
@@ -695,36 +782,122 @@
       }
     });
 
-    // Keep existing download modal logic for Windows/others
-    const otherDownloadLinks = document.querySelectorAll('.card[href*=".exe"]');
-    const downloadModal = document.getElementById('download-modal');
-    const confirmBtn = document.getElementById('confirm-btn');
-    const cancelBtn = document.getElementById('cancel-btn');
-    let pendingUrl = '';
+    // Password Protection Logic
+    const passwordModal = document.getElementById('password-modal');
+    const passwordInput = document.getElementById('password-input');
+    const passwordError = document.getElementById('password-error');
+    const passSubmitBtn = document.getElementById('password-submit-btn');
+    const passCancelBtn = document.getElementById('password-cancel-btn');
+    let targetDownloadUrl = '';
 
-    otherDownloadLinks.forEach(link => {
+    // Target all actual file download links
+    const downloadLinks = document.querySelectorAll('a[href*="releases/download/"]');
+
+    downloadLinks.forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
-        pendingUrl = link.href;
-        downloadModal.style.display = 'flex';
+        targetDownloadUrl = link.href;
+
+        // Reset UI
+        passwordModal.style.display = 'flex';
+        passwordInput.value = '';
+        passwordError.style.display = 'none';
+
+        const passwordButtons = document.getElementById('password-buttons');
+        const successMsg = document.getElementById('password-success');
+        const modalTitle = passwordModal.querySelector('h3');
+        const modalDesc = passwordModal.querySelector('p');
+
+        if (passwordButtons) passwordButtons.style.display = 'flex';
+        if (successMsg) successMsg.style.display = 'none';
+        passwordInput.parentElement.style.display = 'block';
+        if (modalTitle) modalTitle.style.display = 'block';
+        if (modalDesc) modalDesc.style.display = 'block';
+
+        passwordInput.focus();
       });
     });
 
-    if (confirmBtn) {
-      confirmBtn.addEventListener('click', () => {
-        if (pendingUrl) {
-          window.location.href = pendingUrl;
-          downloadModal.style.display = 'none';
+    async function checkPassword() {
+      const password = passwordInput.value;
+      const encoder = new TextEncoder();
+      const data = encoder.encode(password);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
+      const targetHash = 'b8ae66faff887f9ea3e14d4a81df3bc1c3ea7759d7a1c14d81e6b74079fa6090';
+
+      if (hashHex === targetHash) {
+        // Show success state
+        const passwordButtons = document.getElementById('password-buttons');
+        if (passwordButtons) passwordButtons.style.display = 'none';
+        passwordInput.parentElement.style.display = 'none';
+
+        const modalTitle = passwordModal.querySelector('h3');
+        const modalDesc = passwordModal.querySelector('p');
+        if (modalTitle) modalTitle.style.display = 'none';
+        if (modalDesc) modalDesc.style.display = 'none';
+
+        const successMsg = document.getElementById('password-success');
+        if (successMsg) successMsg.style.display = 'flex';
+
+        // Trigger download IMMEDIATELY
+        const tempLink = document.createElement('a');
+        tempLink.href = targetDownloadUrl;
+        tempLink.setAttribute('download', '');
+        tempLink.style.display = 'none';
+        document.body.appendChild(tempLink);
+        tempLink.click();
+        document.body.removeChild(tempLink);
+
+        // Close modal after 2 seconds (giving user time to see success)
+        setTimeout(() => {
+          passwordModal.style.display = 'none';
+          // Reset simple state
+          passwordInput.parentElement.style.display = 'block';
+          if (modalTitle) modalTitle.style.display = 'block';
+          if (modalDesc) modalDesc.style.display = 'block';
+          if (passwordButtons) passwordButtons.style.display = 'flex';
+          if (successMsg) successMsg.style.display = 'none';
+          passwordInput.value = '';
+        }, 2000);
+      } else {
+        passwordError.style.display = 'block';
+        passwordInput.style.borderColor = '#d93025';
+      }
+    }
+
+    if (passSubmitBtn) {
+      passSubmitBtn.addEventListener('click', checkPassword);
+    }
+
+    if (passwordInput) {
+      passwordInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          checkPassword();
+        }
+        // Reset error state on input
+        if (passwordInput.style.borderColor === 'rgb(217, 48, 37)') {
+          passwordInput.style.borderColor = '#dadce0';
+          passwordError.style.display = 'none';
         }
       });
     }
 
-    if (cancelBtn) {
-      cancelBtn.addEventListener('click', () => {
-        downloadModal.style.display = 'none';
-        pendingUrl = '';
+    if (passCancelBtn) {
+      passCancelBtn.addEventListener('click', () => {
+        passwordModal.style.display = 'none';
+        targetDownloadUrl = '';
       });
     }
+
+    // Close password modal on outside click
+    window.addEventListener('click', (e) => {
+      if (e.target === passwordModal) {
+        passwordModal.style.display = 'none';
+      }
+    });
   </script>
 </body>
 
