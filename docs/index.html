@@ -316,9 +316,7 @@
 
     <!-- CARDS OS -->
     <div class="cards">
-      <a class="card"
-        href="https://github.com/mimpungu/devtools/releases/download/v1.0.23/DeuswellTools_1.0.23_x64-setup.exe"
-        download>
+      <a class="card" href="releases/download/DeuswellTools_1.0.24_x64-setup.exe" download>
         <img src="images/microsoft.svg" alt="Windows">
         <h3>Windows</h3>
         <p>Télécharger pour Windows</p>
@@ -330,9 +328,7 @@
         <p>Télécharger pour macOS</p>
       </a>
 
-      <a class="card"
-        href="https://github.com/mimpungu/devtools/releases/download/v1.0.23/deuswell-tools_1.0.23_amd64.AppImage"
-        download>
+      <a class="card" href="releases/download/deuswell-tools_1.0.24_amd64.deb" download>
         <img src="https://cdn.simpleicons.org/linux" alt="Linux">
         <h3>Linux</h3>
         <p>Télécharger pour Linux</p>
@@ -447,8 +443,7 @@
       <a href="#">Conditions d'utilisation supplémentaires de DeuswellTools</a>.
     </div>
 
-    <a class="update-link"
-      href="https://github.com/mimpungu/devtools/releases/download/v1.0.23/DeuswellTools_1.0.23_x64-setup.exe" download>
+    <a class="update-link" id="update-link-trigger" href="#">
       Je souhaite mettre à jour DeuswellTools
     </a>
 
@@ -478,13 +473,39 @@
   </footer>
 
 
+  <!-- Update OS Selection Modal -->
+  <div id="update-modal" class="modal">
+    <div class="modal-content">
+      <h3>Choisir votre système d'exploitation</h3>
+      <p>Sélectionnez votre plateforme pour lancer la mise à jour.</p>
+      <div class="modal-buttons vertical">
+        <a href="releases/download/DeuswellTools_1.0.24_x64-setup.exe" class="chip-btn" download>
+          <div class="chip-icon"><img src="images/microsoft.svg" width="24" alt="Windows"></div>
+          <div class="chip-info"><span class="chip-title">Windows</span><span class="chip-desc">Télécharger
+              l'installateur (.exe)</span></div>
+        </a>
+        <a href="#" id="update-mac-btn" class="chip-btn">
+          <div class="chip-icon"><img src="https://cdn.simpleicons.org/apple" width="24" alt="macOS"></div>
+          <div class="chip-info"><span class="chip-title">macOS</span><span class="chip-desc">Choisir le type de
+              puce</span></div>
+        </a>
+        <a href="releases/download/deuswell-tools_1.0.24_amd64.deb" class="chip-btn" download>
+          <div class="chip-icon"><img src="https://cdn.simpleicons.org/linux" width="24" alt="Linux"></div>
+          <div class="chip-info"><span class="chip-title">Linux</span><span class="chip-desc">Télécharger le paquet
+              (.deb)</span></div>
+        </a>
+      </div>
+      <button class="cancel-link" id="update-cancel">Annuler</button>
+    </div>
+  </div>
+
   <!-- Mac Selection Modal -->
   <div id="mac-modal" class="modal">
     <div class="modal-content">
       <h3>Choisir votre version Mac</h3>
       <p>Sélectionnez le type de processeur de votre Mac.</p>
       <div class="modal-buttons vertical">
-        <a id="mac-intel-link" href="#" class="chip-btn" download>
+        <a id="mac-intel-link" href="releases/download/DeuswellTools_1.0.24_x64.dmg" class="chip-btn" download>
           <div class="chip-icon">
             <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
               <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
@@ -497,7 +518,7 @@
           </div>
         </a>
 
-        <a id="mac-silicon-link" href="#" class="chip-btn" download>
+        <a id="mac-silicon-link" href="releases/download/DeuswellTools_1.0.24_x64.dmg" class="chip-btn" download>
           <div class="chip-icon">
             <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
@@ -638,8 +659,42 @@
       }
     });
 
+    // Update Modal Logic
+    const updateLink = document.getElementById('update-link-trigger');
+    const updateModal = document.getElementById('update-modal');
+    const updateCancel = document.getElementById('update-cancel');
+    const updateMacBtn = document.getElementById('update-mac-btn');
+
+    if (updateLink) {
+      updateLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        updateModal.style.display = 'flex';
+      });
+    }
+
+    if (updateCancel) {
+      updateCancel.addEventListener('click', (e) => {
+        updateModal.style.display = 'none';
+      });
+    }
+
+    if (updateMacBtn) {
+      updateMacBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        updateModal.style.display = 'none';
+        if (macModal) macModal.style.display = 'flex';
+      });
+    }
+
+    // Close update modal on outside click
+    window.addEventListener('click', (e) => {
+      if (e.target === updateModal) {
+        updateModal.style.display = 'none';
+      }
+    });
+
     // Keep existing download modal logic for Windows/others
-    const otherDownloadLinks = document.querySelectorAll('.card[href*=".exe"], .update-link');
+    const otherDownloadLinks = document.querySelectorAll('.card[href*=".exe"]');
     const downloadModal = document.getElementById('download-modal');
     const confirmBtn = document.getElementById('confirm-btn');
     const cancelBtn = document.getElementById('cancel-btn');
